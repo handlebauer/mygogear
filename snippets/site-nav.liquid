@@ -1,0 +1,45 @@
+<ul class="site-nav list--inline {{ nav_alignment }}" id="SiteNav">
+  {% for link in linklists[section.settings.main_linklist].links %}
+    {%- assign child_list_handle = link.title | handleize -%}
+
+    {% if linklists[child_list_handle].links != blank %}
+      <li class="site-nav--has-dropdown site-nav--has-centered-dropdown{% if link.active %} site-nav--active{% endif %}">
+        <a href="{{ link.url }}" class="site-nav__link site-nav__link--main" aria-has-popup="true" aria-expanded="false" aria-controls="SiteNavLabel-{{ child_list_handle }}">
+          {{ link.title }}
+          {% include 'icon-chevron-down' %}
+          <span class="visually-hidden">{{ 'layout.navigation.expand' | t }}</span>
+        </a>
+
+        <div class="site-nav__dropdown site-nav__dropdown--centered site-nav__dropdown--left" id="SiteNavLabel-{{ child_list_handle }}">
+          <div class="site-nav__childlist">
+            <ul class="site-nav__childlist-grid">
+              {% assign reveresed_collections = collections | reverse %}
+              {% for collection in reveresed_collections %}
+                {% unless forloop.first == true %}
+                <li class="site-nav__childlist-item">
+                  <a href="{{ collection.url }}" class="site-nav__link site-nav__child-link site-nav__child-link--parent">
+                    <span class="site-nav__label">{{ collection.title }}</span>
+                  </a>
+                    <ul>
+                      {% for product in collection.products %}
+                        <li>
+                          <a href="{{ product.url }}" class="site-nav__link site-nav__child-link">
+                            <span class="site-nav__label">{{ product.title }}</span>
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                </li>
+                {% endunless %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </li>
+    {% else %}
+      <li {% if link.active %}class="site-nav--active"{% endif %}>
+        <a href="{{ link.url }}" class="site-nav__link site-nav__link--main">{{ link.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

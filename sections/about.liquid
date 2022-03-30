@@ -1,0 +1,119 @@
+<div>
+  <div class="grid grid--no-gutters about-page-image-set">
+    {% for n in (1..2) %}
+      {% assign key = n | prepend: 'image-' %}
+      <div class="about-page-image-set__image" style="background-image: url({{ section.settings[key] | img_url: '2250x' }});"></div>
+    {% endfor %}
+  </div>
+
+  <div class="section-header text-center">
+    <img class="about__logo" src="https://cdn.shopify.com/s/files/1/1636/9213/files/logo_black-zipper_100x@2x.png?v=1561162358">
+    <h1>Our Story</h1>
+  </div>
+
+  <p class="about__p">
+    We tried everything from law enforcement bug-out-bags, to carpentry tool bags, to paramedic response and military bags - no matter what gear we tested, the products we needed to do the job simply didn't exist.
+  </p>
+
+  <p class="about__p" style="text-align: center;">
+    Through this exhaustive research MyGoGear was born.
+  </p>
+
+  <div class="grid grid--no-gutters about-page-image-set">
+    {% for n in (3..4) %}
+      {% assign key = n | prepend: 'image-' %}
+      <div class="about-page-image-set__image" style="background-image: url({{ section.settings[key] | img_url: '2250x' }});"></div>
+    {% endfor %}
+  </div>
+
+  <p class="about__p">
+    Every movie we crewed taught us more. Improvements to our collection were made and features were added until we finally had our own series of purpose-built, quality-constructed products.
+  </p>
+
+  <div class="grid grid--no-gutters about-page-image-set">
+    {% for n in (5..6) %}
+      {% assign key = n | prepend: 'image-' %}
+      <div class="about-page-image-set__image" style="background-image: url({{ section.settings[key] | img_url: '2250x' }});"></div>
+    {% endfor %}
+  </div>
+
+  <p class="about__p">
+    As film pros, we're dedicated to being ready for anything. Our kits are expected to be 'dialed-in' and efficient.
+  </p>
+
+  <p class="about__p" style="text-align: center;">
+    MyGoGear caters to this spirit.
+  </p>
+
+  <div class="grid grid--no-gutters about-page-image-set about-page-image-set--last">
+    {% assign key = 7 | prepend: 'image-' %}
+    <div class="about-page-image-set__image" style="background-image: url({{ section.settings[key] | img_url: '2250x' }});"></div>
+  </div>
+
+  <p class="about__p">
+    MyGoGear continues to innovate our collection, earning us the loyalty and trust of film professionals worldwide. We are listening. Your ideas and feedback help us continue to build mission-specific, high-quality products to keep you on-point for every job.
+  </p>
+
+  <p class="about__p" style="text-align: center;">
+    <strong>Contain the chaos.</strong>
+  </p>
+
+  <div class="creator">
+    <img class="creator__img" src="https://cdn.shopify.com/s/files/1/1636/9213/files/TR_-_Kelly_Simpson001.jpg?2032">
+    <div class="creator__overlay-dampener"></div>
+    <div class="creator__overlay">
+      <span class="creator__separator"></span>
+      <span class="creator__social-icons">
+        <a href="https://www.imdb.com/name/nm0801070/" target="_blank">
+          <i class="fab fa-imdb"></i>
+        </a>
+        <a href="https://instagram.com/kellycameragirl" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </span>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "About",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image-1",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image-2",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image-3",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image-4",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image-5",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image-6",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image-7",
+        "label": "Image"
+      }
+    ]
+  }
+{% endschema %}

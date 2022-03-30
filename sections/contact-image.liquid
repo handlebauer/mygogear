@@ -1,0 +1,14 @@
+<div class="contact-hero__image" style="background-image: url({{ section.settings.image | img_url: '2250x' }});"></div>
+
+{% schema %}
+  {
+    "name": "Contact image",
+    "settings": [{
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }]
+  }
+{% endschema %}
+
+

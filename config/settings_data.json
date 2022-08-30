@@ -124,7 +124,7 @@
           "image": "shopify:\/\/shop_images\/ready-for-anything.webp",
           "layout": "left",
           "title": "Ready for anything",
-          "text": "<p>The MyGoGear Collection is built to offer superior equipment protection, so you can work confidently in any situation. Whether it be a sand storm or a downpour, MyGoGear has you covered with minimal flash and branding, and maximum quality.<\/p>",
+          "text": "<p>The MyGoGear Collection is built to offer superior equipment protection, so you can carry your gear into every situation. Sand storm or downpour - MyGoGear has you covered with minimal flash and branding, and always <br\/>maximum quality.<\/p>",
           "button_label": "Our Story",
           "button_link": "shopify:\/\/pages\/about"
         }

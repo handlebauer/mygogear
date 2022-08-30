@@ -38,7 +38,7 @@ function RegionWidget({ savedRegion }) {
             </button>
           </div>
 
-          Note: shipping cost is optimized by region
+          <p>Note: shipping cost is optimized by region</p>
         </form>
       </div>
     `

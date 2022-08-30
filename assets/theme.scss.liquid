@@ -3714,6 +3714,11 @@ h1.product-single__title {
   white-space: nowrap;
 }
 
+.site-header__icons-wrapper {
+  position: relative;
+  margin-right: -10px;
+}
+
 .site-header__cart,
 .site-header__search,
 .site-header__account {
@@ -3728,21 +3733,20 @@ h1.product-single__title {
   }
 }
 
-// TODO: Confirm this is unnecessary
-// @include media-query($medium-up) {
-//   .site-header__cart,
-//   .site-header__account {
-//     position: absolute;
-//     top: 50%;
-//     right: 0;
-//     padding: 8px 0;
-//     @include transform(translateY(-50%));
-//   }
+@include media-query($medium-up) {
+  .site-header__cart,
+  .site-header__account {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 8px 0;
+    @include transform(translateY(-50%));
+  }
 
-//   .site-header__account {
-//     right: 50px;
-//   }
-// }
+  .site-header__account {
+    right: 50px;
+  }
+}
 
 .site-header__cart {
   display: flex;
@@ -3852,8 +3856,8 @@ h1.product-single__title {
   }
 
   .site-header__icons-wrapper {
-    position: relative;
-    margin-right: -10px;
+    display: flex;
+    justify-content: flex-end;
   }
   .site-header__cart {
     display: flex;

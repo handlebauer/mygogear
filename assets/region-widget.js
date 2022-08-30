@@ -37,6 +37,8 @@ function RegionWidget({ savedRegion }) {
               USA
             </button>
           </div>
+
+          <i class="fa-solid fa-circle-info"></i> Shipping cost is optimized by region
         </form>
       </div>
     `

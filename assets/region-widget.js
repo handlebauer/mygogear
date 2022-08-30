@@ -13,9 +13,7 @@ export const MGG_FLAGS_MAP = {
 function RegionWidget({ savedRegion }) {
   const [region, setRegion] = useState(savedRegion)
   
-  console.log(region)
-  
-  if (region === null) {
+  if (region === undefined) {
     return html`
       <div class="region-modal__container">
         <div class="region-modal__overlay" />

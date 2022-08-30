@@ -28,11 +28,7 @@ function RegionWidget({ savedRegion }) {
             <hr />
           </div>
           <div class="region-modal__body">
-            {
-              Object.values(MGG_FLAGS_MAP).map(src => (
-                <img key={src} src={src} class="region-modal__option" />
-              ))
-            }
+            <img src={MGG_FLAGS_MAP.ca} class="region-modal__option" />
           </div>
         </form>
       </div>

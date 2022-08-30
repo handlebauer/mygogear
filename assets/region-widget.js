@@ -7,16 +7,18 @@ export const MGG_FLAGS_MAP = {
 }
 
 
-function RegionWidget () {
+function RegionWidget (savedRegion) {
   if (savedRegion === null) {
     return html`
     
     `
   }
+  
   return html`
-  <img src="${region}" className="site-header__region-flag" />
+    <img src="${region}" className="site-header__region-flag" />
   `
 }
+
 const savedRegion = /** @type {RegionString} */ (
   localStorage.getItem('mgg-region')
 )

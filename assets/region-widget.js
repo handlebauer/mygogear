@@ -13,7 +13,12 @@ export const MGG_FLAGS_MAP = {
 function RegionWidget({ savedRegion }) {
   const [region, setRegion] = useState(savedRegion)
   
-  function onSumbit(event) {
+  // function onSumbit(event) {
+  //   event.preventDefault()
+  //   setRegion(event.target.value)
+  // }
+  
+  function handleClick(event) {
     event.preventDefault()
     setRegion(event.target.value)
   }
@@ -28,11 +33,11 @@ function RegionWidget({ savedRegion }) {
             <hr />
           </div>
           <div class="region-modal__body">
-            <button class="region-modal__option">
+            <button class="region-modal__option" value="ca" onClick={${handleClick}}>
               <img src="${MGG_FLAGS_MAP.ca}" />
               Canada
             </button>
-            <button class="region-modal__option">
+            <button class="region-modal__option" value="us" onClick={${handleClick}}>
               <img src="${MGG_FLAGS_MAP.us}" />
               USA
             </button>

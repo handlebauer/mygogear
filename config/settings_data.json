@@ -195,13 +195,25 @@
         "settings": {
           "section_height": "medium"
         }
+      },
+      "1661881410a86b45cc": {
+        "type": "collection",
+        "settings": {
+          "title": "Accessories",
+          "collection": "accessories",
+          "grid": "3",
+          "rows": "2",
+          "show_vendor": false,
+          "show_view_all": false
+        }
       }
     },
     "content_for_index": [
       "hero",
       "feature-row",
       "featured-collections",
-      "16618813050a8008eb"
+      "16618813050a8008eb",
+      "1661881410a86b45cc"
     ]
   },
   "presets": {

@@ -10,14 +10,15 @@ const savedRegion = /** @type {RegionString} */ (
   window.localStorage.getItem('mgg-region')
 )
 
+let region
+
 if (savedRegion === null) {
-  const $modalParent = document.getElementById('modal-parent')
-  console.log($modalParent)
+
 }
 
 function RegionWidget () {
   return html`
-    <img src="" className="site-header__region-flag" />
+    <img src="${region}" className="site-header__region-flag" />
   `
 }
 

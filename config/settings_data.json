@@ -50,27 +50,26 @@
         "type": "header",
         "settings": {
           "align_logo": "left",
-          "logo": "shopify:\/\/shop_images\/mygogear-logo_70b267cd-e5d6-4d2e-8aaf-2934a522e081.png",
           "logo_max_width": "100",
           "main_linklist": "main-menu",
           "message": false,
           "message_text": "Announce something here",
           "message_link": "",
           "color_bg": "#7796a8",
-          "color_text": "#fff"
+          "color_text": "#ffffff"
         }
       },
       "hero": {
         "type": "hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/IMG_1143-processed.JPG",
+          "image": "shopify:\/\/shop_images\/mygogearhero.webp",
           "alignment": "center",
-          "title": "SUPERIOR EQUIPMENT",
-          "text": "",
-          "hero_size": "medium",
+          "title": "CONTAIN THE CHAOS",
+          "text": "<p>Purpose built, quality constructed<\/p>",
+          "hero_size": "large",
           "text_size": "large",
-          "button_label": "",
-          "button_link": ""
+          "button_label": "Explore",
+          "button_link": "https:\/\/mygogear.com\/collections\/all"
         }
       },
       "slideshow": {
@@ -79,7 +78,6 @@
           "slideshow-0": {
             "type": "image",
             "settings": {
-              "image": "",
               "alignment": "top",
               "title": "Image slide",
               "subheading": "Tell your brand's story through video and images",
@@ -89,7 +87,6 @@
           "slideshow-1": {
             "type": "image",
             "settings": {
-              "image": "",
               "alignment": "top",
               "title": "Image slide",
               "subheading": "Tell your brand's story through video and images",
@@ -122,7 +119,6 @@
       "feature-row": {
         "type": "feature-row",
         "settings": {
-          "image": "shopify:\/\/shop_images\/IMG_4610.jpg",
           "layout": "left",
           "title": "Ready for anything",
           "text": "<p>The MyGoGear Collection is built to offer superior equipment protection, so you can work confidently in any situation. Whether it be a sand storm or a downpour, MyGoGear has you covered with minimal flash and branding, and maximum quality.<\/p>",

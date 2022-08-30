@@ -20,6 +20,7 @@ function RegionWidget({ savedRegion }) {
   
   function handleClick(event) {
     event.preventDefault()
+    console.log(event)
     setRegion(event.target.value)
   }
   

@@ -1,4 +1,5 @@
-import { html, render, useState } from 'https://unpkg.com/htm/preact/index.mjs?module'
+import { html, render } from 'https://unpkg.com/htm/preact/index.mjs?module'
+import { useState } from 'https://unpkg.com/preact@10.10.6/hooks/dist/hooks.module.js'
 
 export const MGG_REGIONS_MAP = { ca: 'mygogear.ca', us: 'mygogear.com' }
 export const MGG_FLAGS_MAP = {
@@ -14,7 +15,7 @@ function RegionWidget({ savedRegion }) {
       <div class="region-modal__container">
         <div class="region-modal__overlay" />
         <div class="region-modal">
-          Hello!
+          <input type="select">
         </div>
       </div>
     `

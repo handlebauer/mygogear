@@ -13,10 +13,9 @@ export const MGG_FLAGS_MAP = {
 function RegionWidget({ savedRegion }) {
   const [region, setRegion] = useState(savedRegion)
   
-  // function onSumbit(event) {
-  //   event.preventDefault()
-  //   setRegion(event.target.value)
-  // }
+  function onSumbit(event) {
+    event.preventDefault()
+  }
   
   function handleClick(event) {
     event.preventDefault()

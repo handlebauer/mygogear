@@ -10,6 +10,10 @@ export const MGG_FLAGS_MAP = {
   us: 'https://cdn.shopify.com/s/files/1/1636/9213/files/US-United-States-Flag-icon.jpg?v=1661887239',
 }
 
+function IconImportant() {
+  return html`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 20c5.514 0 10-4.486 10-10S15.514 0 10 0 0 4.486 0 10s4.486 10 10 10zm1-6a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-9a1 1 0 100 2 1 1 0 000-2z" fill="#5C5F62"/></svg>`
+}
+
 function RegionWidget({ savedRegion }) {
   const [region, setRegion] = useState(savedRegion)
   
@@ -36,7 +40,7 @@ function RegionWidget({ savedRegion }) {
               USA
             </button>
           </div>
-          <i class="fas fa-triangle-exclamation"></i>
+
           <p>Note: shipping cost is optimized by region</p>
         </dialogue>
       </div>

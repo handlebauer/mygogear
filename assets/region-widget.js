@@ -12,7 +12,7 @@ function RegionWidget ({ region }) {
   
   if (region === null) {
     return html`
-    
+      
     `
   }
 

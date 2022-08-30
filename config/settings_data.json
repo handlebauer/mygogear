@@ -74,6 +74,7 @@
       },
       "slideshow": {
         "type": "slideshow",
+        "disabled": true,
         "blocks": {
           "slideshow-0": {
             "type": "image",
@@ -108,10 +109,10 @@
       "featured-collections": {
         "type": "collection",
         "settings": {
-          "title": "Starter bags",
-          "collection": "",
-          "grid": "3",
-          "rows": "2",
+          "title": "Bags",
+          "collection": "bags",
+          "grid": "5",
+          "rows": "1",
           "show_vendor": false,
           "show_view_all": false
         }
@@ -164,13 +165,43 @@
         "settings": {
           "cart_notes_enable": false
         }
+      },
+      "16618813050a8008eb": {
+        "type": "image-bar",
+        "blocks": {
+          "16618813050a8008eb-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/homepage-gallery-1.webp",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "16618813050a8008eb-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/homepage-gallery-2.webp",
+              "alignment": "bottom",
+              "link": "",
+              "cta_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "16618813050a8008eb-0",
+          "16618813050a8008eb-1"
+        ],
+        "settings": {
+          "section_height": "medium"
+        }
       }
     },
     "content_for_index": [
       "hero",
       "feature-row",
       "featured-collections",
-      "slideshow"
+      "16618813050a8008eb"
     ]
   },
   "presets": {

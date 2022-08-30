@@ -10,7 +10,10 @@ const savedRegion = /** @type {RegionString} */ (
   window.localStorage.getItem('mgg-region')
 )
 
-console.log(savedRegion)
+if (savedRegion === null) {
+  const $modalParent = document.getElementById('modal-parent')
+
+}
 
 function RegionWidget () {
   return html`

@@ -28,10 +28,14 @@ function RegionWidget({ savedRegion }) {
             <hr />
           </div>
           <div class="region-modal__body">
-            <img src="${MGG_FLAGS_MAP.ca}" class="region-modal__option" />
-            Canada
-            <img src="${MGG_FLAGS_MAP.us}" class="region-modal__option" />
-            US
+            <div class="region-modal__option">
+              <img src="${MGG_FLAGS_MAP.ca}" class="" />
+              Canada
+            </div>
+            <div class="region-modal__option">
+              <img src="${MGG_FLAGS_MAP.us}" class="region-modal__option" />
+              US
+            </div>
           </div>
         </form>
       </div>

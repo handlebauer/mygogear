@@ -6,20 +6,19 @@ export const MGG_FLAGS_MAP = {
   us: 'https://cdn.shopify.com/s/files/1/1636/9213/files/US-United-States-Flag-icon.jpg?v=1661887239',
 }
 
+
+function RegionWidget () {
+  if (savedRegion === null) {
+    return html`
+    
+    `
+  }
+  return html`
+  <img src="${region}" className="site-header__region-flag" />
+  `
+}
 const savedRegion = /** @type {RegionString} */ (
   localStorage.getItem('mgg-region')
 )
 
-let region
-
-if (savedRegion === null) {
-
-}
-
-function RegionWidget () {
-  return html`
-    <img src="${region}" className="site-header__region-flag" />
-  `
-}
-
-render(html`<${RegionWidget} />`, document.querySelector('.site-header__region'))
+render(html`<${RegionWidget} region=${savedRegion} />`, document.querySelector('.site-header__region'))

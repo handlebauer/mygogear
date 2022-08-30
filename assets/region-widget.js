@@ -7,7 +7,7 @@ export const MGG_FLAGS_MAP = {
 }
 
 
-function RegionWidget (region) {
+function RegionWidget ({ region }) {
   console.log(region)
   
   if (region === null) {

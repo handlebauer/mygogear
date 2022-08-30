@@ -13,7 +13,9 @@ function RegionWidget({ region }) {
     return html`
       <div class="region-modal__container">
         <div class="region-modal__overlay" />
-        <dialogue class="region-modal" />
+        <dialogue class="region-modal">
+          Hello!
+        </dialogue>
       </div>
     `
   }

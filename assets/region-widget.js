@@ -18,10 +18,8 @@ function RegionWidget({ savedRegion }) {
   //   setRegion(event.target.value)
   // }
   
-  function handleClick(event) {
-    event.preventDefault()
-    console.log(event.target.value)
-    setRegion(event.target.value)
+  function handleClick(value) {
+    setRegion(value)
   }
   
   if (region === undefined) {

@@ -1,7 +1,7 @@
 import { html, render } from 'https://unpkg.com/htm/preact/index.mjs?module'
 
-function App () {
+function RegionWidget () {
   return html`<p>Testing</p>`
 }
 
-render(html`<${App} />`, document.querySelector('.site-header__region'))
+render(html`<${RegionWidget} />`, document.querySelector('.site-header__region'))

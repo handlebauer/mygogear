@@ -13,16 +13,24 @@ export const MGG_FLAGS_MAP = {
 function RegionWidget({ savedRegion }) {
   const [region, setRegion] = useState(savedRegion)
   
+  function onSumbit(event) {
+    event.preventDefault()
+    setRegion(event.target.value)
+  }
+  
   if (region === undefined) {
     return html`
       <div class="region-modal__container">
         <div class="region-modal__overlay" />
-        <div class="region-modal">
+        <form class="region-modal">
           <div class="region-modal__header">
             <h3>Where are you located?</h3>
             <hr />
           </div>
-        </div>
+          <div class="region-modal__body">
+
+          </div>
+        </form>
       </div>
     `
   }

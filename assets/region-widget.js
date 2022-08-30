@@ -6,8 +6,11 @@ export const MGG_FLAGS_MAP = {
   us: 'https://cdn.shopify.com/s/files/1/1636/9213/files/US-United-States-Flag-icon.jpg?v=1661887239',
 }
 
+const savedRegion = /** @type {RegionString} */ (
+  window.localStorage.getItem('mgg-region')
+)
 
-console.log('hey')
+console.log(savedRegion)
 
 function RegionWidget () {
   return html`

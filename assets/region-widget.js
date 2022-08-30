@@ -6,20 +6,16 @@ export const MGG_FLAGS_MAP = {
   us: 'https://cdn.shopify.com/s/files/1/1636/9213/files/US-United-States-Flag-icon.jpg?v=1661887239',
 }
 
-function Modal() {
-  return html`
-    <div class=".region-modal__container">
-      <dialogue>
-      </dialogue>
-    </div>
-  `
-}
-
 function RegionWidget({ region }) {
   console.log(region)
   
   if (region === null) {
-    return html`<Modal />`
+    return html`
+      <div class=".region-modal__container">
+        <dialogue>
+        </dialogue>
+      </div>
+    `
   }
 
   return html`

@@ -13,6 +13,7 @@ function RegionWidget({ region }) {
     return html`
       <div class="region-modal__container">
         <dialogue>
+          hello
         </dialogue>
       </div>
     `

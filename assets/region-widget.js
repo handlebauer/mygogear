@@ -8,8 +8,9 @@ export const MGG_FLAGS_MAP = {
 
 function Modal() {
   return html`
-    <div class="region-modal">
-
+    <div class=".region-modal__container">
+      <dialogue>
+      </dialogue>
     </div>
   `
 }

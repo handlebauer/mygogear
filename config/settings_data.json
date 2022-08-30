@@ -134,7 +134,7 @@
           "footer_linklist": "footer",
           "footer_linklist_two": "",
           "footer_newsletter_enable": false,
-          "show_payment_icons": false
+          "show_payment_icons": true
         }
       },
       "collection-template": {

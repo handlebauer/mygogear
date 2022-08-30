@@ -36,7 +36,8 @@ function RegionWidget({ savedRegion }) {
               USA
             </button>
           </div>
-          <p><i class="fas fa-triangle-exclamation"></i> Note: shipping cost is optimized by region</p>
+          <i class="fas fa-triangle-exclamation"></i>
+          <p>Note: shipping cost is optimized by region</p>
         </dialogue>
       </div>
     `

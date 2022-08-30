@@ -7,7 +7,11 @@ export const MGG_FLAGS_MAP = {
 }
 
 function Modal() {
+  return html`
+    <div class="region-modal">
 
+    </div>
+  `
 }
 
 function RegionWidget({ region }) {
@@ -20,7 +24,7 @@ function RegionWidget({ region }) {
   }
 
   return html`
-    <img src="${MGG_FLAGS_MAP[region]}" className="site-header__region-flag" />
+    <img src="${MGG_FLAGS_MAP[region]}" />
   `
 }
 

@@ -34,7 +34,7 @@ function RegionWidget({ savedRegion }) {
             </div>
             <div class="region-modal__option">
               <img src="${MGG_FLAGS_MAP.us}" class="region-modal__option" />
-              US
+              United States
             </div>
           </div>
         </form>

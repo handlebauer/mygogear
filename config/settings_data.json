@@ -119,11 +119,12 @@
       "feature-row": {
         "type": "feature-row",
         "settings": {
+          "image": "shopify:\/\/shop_images\/ready-for-anything.webp",
           "layout": "left",
           "title": "Ready for anything",
           "text": "<p>The MyGoGear Collection is built to offer superior equipment protection, so you can work confidently in any situation. Whether it be a sand storm or a downpour, MyGoGear has you covered with minimal flash and branding, and maximum quality.<\/p>",
-          "button_label": "",
-          "button_link": ""
+          "button_label": "Our Story",
+          "button_link": "shopify:\/\/pages\/about"
         }
       },
       "footer": {
@@ -167,8 +168,8 @@
     },
     "content_for_index": [
       "hero",
-      "featured-collections",
       "feature-row",
+      "featured-collections",
       "slideshow"
     ]
   },

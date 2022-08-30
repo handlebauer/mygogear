@@ -12,7 +12,7 @@ const savedRegion = /** @type {RegionString} */ (
 
 if (savedRegion === null) {
   const $modalParent = document.getElementById('modal-parent')
-
+  console.log($modalParent)
 }
 
 function RegionWidget () {

@@ -34,7 +34,7 @@ function RegionWidget({ savedRegion }) {
             <hr />
           </div>
           <div class="region-modal__body">
-            <button class="region-modal__option" value="ca" onClick=${handleClick}>
+            <button class="region-modal__option" value="ca" onClick="${handleClick}">
               <img src="${MGG_FLAGS_MAP.ca}" />
               Canada
             </button>

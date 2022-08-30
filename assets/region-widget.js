@@ -7,13 +7,13 @@ export const MGG_FLAGS_MAP = {
 }
 
 
-function RegionWidget (savedRegion) {
-  if (savedRegion === null) {
+function RegionWidget (region) {
+  if (region === null) {
     return html`
     
     `
   }
-  
+
   return html`
     <img src="${region}" className="site-header__region-flag" />
   `

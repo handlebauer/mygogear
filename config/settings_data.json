@@ -142,7 +142,7 @@
         "type": "collection-template",
         "settings": {
           "layout": "grid",
-          "grid": "3",
+          "grid": "4",
           "rows": "2",
           "show_collection_image": true,
           "show_vendor": false,

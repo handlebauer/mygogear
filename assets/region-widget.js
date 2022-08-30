@@ -1,5 +1,5 @@
-import { h, render } from 'https://unpkg.com/preact?module';
-import { useState } from 'https://unpkg.com/preact@10.10.6/hooks/dist/hooks.module.js'
+import { h, render } from 'https://unpkg.com/preact@latest?module';
+import { useState } from 'https://unpkg.com/preact@latest/hooks/dist/hooks.module.js?module'
 import htm from 'https://unpkg.com/htm?module';
 
 const html = htm.bind(h);

@@ -7,7 +7,7 @@ export const MGG_FLAGS_MAP = {
 }
 
 const savedRegion = /** @type {RegionString} */ (
-  window.localStorage.getItem('mgg-region')
+  localStorage.getItem('mgg-region')
 )
 
 let region

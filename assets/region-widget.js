@@ -8,6 +8,8 @@ export const MGG_FLAGS_MAP = {
 
 
 function RegionWidget (region) {
+  console.log(region)
+  
   if (region === null) {
     return html`
     

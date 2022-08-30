@@ -11,7 +11,7 @@ function RegionWidget({ region }) {
   
   if (region === null) {
     return html`
-      <div class=".region-modal__container">
+      <div class="region-modal__container">
         <dialogue>
         </dialogue>
       </div>

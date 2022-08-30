@@ -19,9 +19,7 @@ function RegionWidget({ region }) {
   console.log(region)
   
   if (region === null) {
-    return html`
-      
-    `
+    return html`<Modal />`
   }
 
   return html`

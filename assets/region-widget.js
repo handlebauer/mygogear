@@ -18,8 +18,10 @@ function RegionWidget({ savedRegion }) {
       <div class="region-modal__container">
         <div class="region-modal__overlay" />
         <div class="region-modal">
-          <h1>Where are you located?</h1>
-          <hr />
+          <div class="region-modal__header">
+            <h1>Where are you located?</h1>
+            <hr />
+          </div>
         </div>
       </div>
     `

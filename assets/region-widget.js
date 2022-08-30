@@ -17,9 +17,7 @@ function RegionWidget({ savedRegion }) {
     return html`
       <div class="region-modal__container">
         <div class="region-modal__overlay" />
-        <div class="region-modal">
-          <input type="select" />
-        </div>
+        <div class="region-modal" />
       </div>
     `
   }

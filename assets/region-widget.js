@@ -38,7 +38,7 @@ function RegionWidget({ savedRegion }) {
             </button>
           </div>
 
-          <i class="fa-brands fa-instagram"></i> Note: Shipping cost is optimized by region
+          <i class="fas fa-angle-down"></i> Note: Shipping cost is optimized by region
         </form>
       </div>
     `

@@ -1,5 +1,8 @@
-import { html, render } from 'https://unpkg.com/htm/preact/index.mjs?module'
+import { h, render } from 'https://unpkg.com/preact?module';
 import { useState } from 'https://unpkg.com/preact@10.10.6/hooks/dist/hooks.module.js'
+import htm from 'https://unpkg.com/htm?module';
+
+const html = htm.bind(h);
 
 export const MGG_REGIONS_MAP = { ca: 'mygogear.ca', us: 'mygogear.com' }
 export const MGG_FLAGS_MAP = {

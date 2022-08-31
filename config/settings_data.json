@@ -70,7 +70,7 @@
           "hero_size": "large",
           "text_size": "large",
           "button_label": "Explore",
-          "button_link": "https:\/\/mygogear.com\/collections\/all"
+          "button_link": "shopify:\/\/collections"
         }
       },
       "slideshow": {

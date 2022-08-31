@@ -22,7 +22,7 @@ function RegionWidget() {
     } 
 
     // TODO: Change this to location.replace() when ready
-    window.location.href = `https://${MGG_REGIONS_MAP[region]}`
+    // window.location.href = `https://${MGG_REGIONS_MAP[region]}`
     return
   }
 

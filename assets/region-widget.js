@@ -66,6 +66,6 @@ function RegionWidget() {
 }
 
 render(
-  html`<${RegionWidget} region=${savedRegion} />`,
+  html`<${RegionWidget} />`,
   document.querySelector(".site-header__region")
 );

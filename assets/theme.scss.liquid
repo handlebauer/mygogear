@@ -5808,7 +5808,9 @@ $toolbar-height-small: 46px;
 }
 
 body {
-  overflow: hidden;
+  & :has(.region-modal__container) {
+    overflow: hidden;
+  }
 
   & .region-modal__container {
     top: 0;

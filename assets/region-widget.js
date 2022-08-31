@@ -21,7 +21,7 @@ function RegionWidget() {
       `
     } 
 
-    window.location.href(`https://${MGG_REGIONS_MAP[region]}`)
+    window.location.replace(`https://${MGG_REGIONS_MAP[region]}`)
     return
   }
 

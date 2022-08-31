@@ -4,7 +4,10 @@ import htm from "https://unpkg.com/htm?module";
 
 const html = htm.bind(h);
 
-const MGG_REGIONS_MAP = { ca: "my-go-gear-ca.myshopify.com", us: "mygogear.com" };
+const MGG_REGIONS_MAP = {
+  ca: "my-go-gear-ca.myshopify.com",
+  us: "mygogear.com",
+};
 const MGG_FLAGS_MAP = {
   ca: "https://cdn.shopify.com/s/files/1/1636/9213/files/ca-flag.jpg?v=1661907861",
   us: "https://cdn.shopify.com/s/files/1/1636/9213/files/us-flag.jpg?v=1661907748",
@@ -12,18 +15,19 @@ const MGG_FLAGS_MAP = {
 const STORAGE_KEY = "mgg_region";
 
 function RegionWidget() {
-  const [region, setRegion] = useState(localStorage.getItem(STORAGE_KEY));
+  const [region, setRegion] = useState(
+    new URLSearchParams(location.search).get("region") ||
+      localStorage.getItem(STORAGE_KEY)
+  );
 
   if (region) {
     if (MGG_REGIONS_MAP[region] === window.location.hostname) {
-      return html`
-        <img src="${MGG_FLAGS_MAP[region]}" />
-      `
-    } 
+      return html` <img src="${MGG_FLAGS_MAP[region]}" /> `;
+    }
 
     // TODO: Change this to location.replace() when ready
-    window.location.href = `https://${MGG_REGIONS_MAP[region]}`
-    return
+    window.location.href = `https://${MGG_REGIONS_MAP[region]}/?region=${region}`;
+    return;
   }
 
   function handleClick(value) {

@@ -4,7 +4,7 @@ import htm from "https://unpkg.com/htm?module";
 
 const html = htm.bind(h);
 
-const MGG_REGIONS_MAP = { ca: "mygogear.ca", us: "mygogear.com" };
+const MGG_REGIONS_MAP = { ca: "my-go-gear-ca.myshopify.com", us: "mygogear.com" };
 const MGG_FLAGS_MAP = {
   ca: "https://cdn.shopify.com/s/files/1/1636/9213/files/CA-Canada-Flag-icon.jpg?v=1661887235",
   us: "https://cdn.shopify.com/s/files/1/1636/9213/files/US-United-States-Flag-icon.jpg?v=1661887239",

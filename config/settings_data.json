@@ -172,7 +172,8 @@
           "16618813050a8008eb-0": {
             "type": "image",
             "settings": {
-              "alignment": "center",
+              "image": "shopify:\/\/shop_images\/mgg_story_2.jpg",
+              "alignment": "bottom",
               "link": "",
               "cta_label": ""
             }
@@ -180,6 +181,7 @@
           "16618813050a8008eb-1": {
             "type": "image",
             "settings": {
+              "image": "shopify:\/\/shop_images\/mgg_story_1.jpg",
               "alignment": "bottom",
               "link": "",
               "cta_label": ""

@@ -15,6 +15,9 @@ function RegionWidget() {
   const [region, setRegion] = useState(localStorage.getItem(STORAGE_KEY));
 
   if (region) {
+    console.log(window.location.hostname)
+    console.log(MGG_REGIONS_MAP[region] === window.location.hostname)
+    
     if (MGG_REGIONS_MAP[region] === window.location.hostname) {
       return html`
         <img src="${MGG_FLAGS_MAP[region]}" />

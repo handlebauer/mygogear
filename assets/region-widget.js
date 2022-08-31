@@ -38,7 +38,7 @@ function RegionWidget({ savedRegion }) {
           </div>
 
           <div class="footer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#000" fill-rule="evenodd" d="M10 20c5.514 0 10-4.486 10-10S15.514 0 10 0 0 4.486 0 10s4.486 10 10 10zm1-6a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-9a1 1 0 100 2 1 1 0 000-2z" fill="#5C5F62"/></svg>
+            <i class="fa-solid fa-circle-exclamation"></i>
             Shipping cost is optimized by region
           </div>
         </dialogue>

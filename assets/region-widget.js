@@ -12,9 +12,7 @@ const MGG_FLAGS_MAP = {
 const STORAGE_KEY = "mgg_region";
 
 function RegionWidget() {
-  const [region, setRegion] = useState(localStorage.getItem("mgg-region"));
-
-  console.log(localStorage.getItem("mgg-region"))
+  const [region, setRegion] = useState(localStorage.getItem(STORAGE_KEY));
 
   if (region) {
     if (MGG_REGIONS_MAP[region] === window.location.hostname) {

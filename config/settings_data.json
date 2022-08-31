@@ -120,6 +120,7 @@
       "feature-row": {
         "type": "feature-row",
         "settings": {
+          "image": "shopify:\/\/shop_images\/mgg_story_5.jpg",
           "layout": "left",
           "title": "Ready for anything",
           "text": "<p>The MyGoGear Collection is built to offer superior equipment protection, so you can carry your gear into every situation. Sand storm or downpour - MyGoGear has you covered with minimal flash and branding, and always maximum quality.<\/p>",

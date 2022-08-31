@@ -62,7 +62,7 @@
       "hero": {
         "type": "hero",
         "settings": {
-          "image": "shopify:\/\/shop_images\/mgg_story_8_c1435956-f765-48db-b7aa-18194c9b06b6.jpg",
+          "image": "shopify:\/\/shop_images\/mygogearhero.webp",
           "alignment": "center",
           "title": "CONTAIN THE CHAOS",
           "text": "<p>Purpose built, quality constructed<\/p>",
@@ -120,7 +120,7 @@
       "feature-row": {
         "type": "feature-row",
         "settings": {
-          "image": "shopify:\/\/shop_images\/mgg_story_5.jpg",
+          "image": "shopify:\/\/shop_images\/ready-for-anything.webp",
           "layout": "left",
           "title": "Ready for anything",
           "text": "<p>The MyGoGear Collection is built to offer superior equipment protection, so you can carry your gear into every situation. Sand storm or downpour - MyGoGear has you covered with minimal flash and branding, and always maximum quality.<\/p>",
@@ -172,7 +172,7 @@
           "16618813050a8008eb-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/mgg_story_2.jpg",
+              "image": "shopify:\/\/shop_images\/homepage-gallery-1.webp",
               "alignment": "center",
               "link": "",
               "cta_label": ""
@@ -181,7 +181,7 @@
           "16618813050a8008eb-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/mgg_story_1.jpg",
+              "image": "shopify:\/\/shop_images\/homepage-gallery-2.webp",
               "alignment": "bottom",
               "link": "",
               "cta_label": ""
@@ -200,7 +200,7 @@
         "type": "collection",
         "settings": {
           "title": "Accessories",
-          "collection": "trays",
+          "collection": "accessories",
           "grid": "3",
           "rows": "2",
           "show_vendor": false,
@@ -210,19 +210,19 @@
       "about": {
         "type": "about",
         "settings": {
-          "image-1": "shopify:\/\/shop_images\/richard_drawing_0c6e36c5-1f19-4c53-b152-63599f520088.jpg",
-          "image-2": "shopify:\/\/shop_images\/IMG_3778_for-web.jpg",
-          "image-3": "shopify:\/\/shop_images\/IMG_3694.jpg",
-          "image-4": "shopify:\/\/shop_images\/IMG_3748.jpg",
-          "image-5": "shopify:\/\/shop_images\/IMG_4092_for-web.jpg",
-          "image-6": "shopify:\/\/shop_images\/IMG_3812_copy.jpg",
-          "image-7": "shopify:\/\/shop_images\/IMG_1143-processed-for-web.jpg"
+          "image-1": "shopify:\/\/shop_images\/about-1.webp",
+          "image-2": "shopify:\/\/shop_images\/about-2.webp",
+          "image-3": "shopify:\/\/shop_images\/about-3.webp",
+          "image-4": "shopify:\/\/shop_images\/about-4.webp",
+          "image-5": "shopify:\/\/shop_images\/about-5.webp",
+          "image-6": "shopify:\/\/shop_images\/about-6.webp",
+          "image-7": "shopify:\/\/shop_images\/about-7.webp"
         }
       },
       "contact-image": {
         "type": "contact-image",
         "settings": {
-          "image": "shopify:\/\/shop_images\/IMG_3709.jpg"
+          "image": "shopify:\/\/shop_images\/support-img.webp"
         }
       }
     },

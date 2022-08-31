@@ -59,7 +59,7 @@ function RegionWidget() {
           </button>
         </div>
         <div class="footer">
-          <i class="fa-solid fa-map-location-dot fa-lg"></i>
+          <i class="fa-solid fa-location-arrow fa-lg"></i>
           Shipping cost is optimized by region
         </div>
       </dialogue>

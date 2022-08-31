@@ -14,41 +14,41 @@ const STORAGE_KEY = 'mgg_region'
 function RegionWidget({ savedRegion }) {
   const [region, setRegion] = useState(savedRegion)
   
+  if (region) {
+    return html`
+      <img src="${MGG_FLAGS_MAP[region]}" />
+    `
+  }
+  
   function handleClick(value) {
     setRegion(value)
     localStorage.setItem(STORAGE_KEY, value)
   }
   
-  if (region === undefined) {
-    return html`
-      <div class="region-modal__container">
-        <div class="region-modal__overlay" />
-        <dialogue class="region-modal">
-          <div class="region-modal__header">
-            <h3>Where are you located?</h3>
-            <hr />
-          </div>
-          <div class="region-modal__body">
-            <button class="region-modal__option" onClick="${() => handleClick('ca')}">
-              <img src="${MGG_FLAGS_MAP.ca}" />
-              Canada
-            </button>
-            <button class="region-modal__option" onClick=${() => handleClick('us')}>
-              <img src="${MGG_FLAGS_MAP.us}" />
-              USA
-            </button>
-          </div>
-          <div class="footer">
-            <i class="fa-solid fa-circle-exclamation fa-lg"></i>
-            Shipping cost is optimized by region
-          </div>
-        </dialogue>
-      </div>
-    `
-  }
-
   return html`
-    <img src="${MGG_FLAGS_MAP[region]}" />
+    <div class="region-modal__container">
+      <div class="region-modal__overlay" />
+      <dialogue class="region-modal">
+        <div class="region-modal__header">
+          <h3>Where are you located?</h3>
+          <hr />
+        </div>
+        <div class="region-modal__body">
+          <button class="region-modal__option" onClick="${() => handleClick('ca')}">
+            <img src="${MGG_FLAGS_MAP.ca}" />
+            Canada
+          </button>
+          <button class="region-modal__option" onClick=${() => handleClick('us')}>
+            <img src="${MGG_FLAGS_MAP.us}" />
+            USA
+          </button>
+        </div>
+        <div class="footer">
+          <i class="fa-solid fa-circle-exclamation fa-lg"></i>
+          Shipping cost is optimized by region
+        </div>
+      </dialogue>
+    </div>
   `
 }
 

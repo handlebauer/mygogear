@@ -15,9 +15,6 @@ function RegionWidget({ savedRegion }) {
   const [region, setRegion] = useState(savedRegion)
   
   if (region) {
-    return html`
-      <img src="${MGG_FLAGS_MAP[region]}" />
-    `
   }
   
   function handleClick(value) {
@@ -52,8 +49,6 @@ function RegionWidget({ savedRegion }) {
   `
 }
 
-const savedRegion = /** @type {RegionString} */ (
-  localStorage.getItem('mgg-region')
-)
+const savedRegion = localStorage.getItem('mgg-region')
 
 render(html`<${RegionWidget} region=${savedRegion} />`, document.querySelector('.site-header__region'))

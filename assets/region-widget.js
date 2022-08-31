@@ -57,7 +57,7 @@ function RegionWidget() {
         </div>
         <div class="footer">
           <i class="fa-solid fa-location-arrow fa-lg"></i>
-          Shipping cost is optimized by region
+          Shipping costs are optimized by region
         </div>
       </dialogue>
     </div>

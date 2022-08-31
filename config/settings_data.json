@@ -219,6 +219,12 @@
           "image-6": "shopify:\/\/shop_images\/about-6.webp",
           "image-7": "shopify:\/\/shop_images\/about-7.webp"
         }
+      },
+      "contact-image": {
+        "type": "contact-image",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/support-img.webp"
+        }
       }
     },
     "content_for_index": [

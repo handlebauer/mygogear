@@ -11,8 +11,8 @@ const MGG_FLAGS_MAP = {
 };
 const STORAGE_KEY = "mgg_region";
 
-function RegionWidget({ savedRegion }) {
-  const [region, setRegion] = useState(savedRegion);
+function RegionWidget() {
+  const [region, setRegion] = useState(localStorage.getItem("mgg-region"));
 
   console.log(region)
 

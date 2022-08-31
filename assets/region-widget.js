@@ -15,6 +15,11 @@ function RegionWidget({ savedRegion }) {
   const [region, setRegion] = useState(savedRegion);
 
   if (region) {
+    if (MGG_REGIONS_MAP[region] === window.location.hostname) {
+      return html`
+        <img src="${MGG_FLAGS_MAP[region]}" />
+      `
+    }
   }
 
   function handleClick(value) {

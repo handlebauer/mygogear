@@ -65,8 +65,6 @@ function RegionWidget({ savedRegion }) {
   `;
 }
 
-const savedRegion = localStorage.getItem("mgg-region");
-
 render(
   html`<${RegionWidget} region=${savedRegion} />`,
   document.querySelector(".site-header__region")

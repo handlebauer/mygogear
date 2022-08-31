@@ -14,7 +14,7 @@ const STORAGE_KEY = "mgg_region";
 function RegionWidget() {
   const [region, setRegion] = useState(localStorage.getItem("mgg-region"));
 
-  console.log(region)
+  console.log(localStorage.getItem("mgg-region"))
 
   if (region) {
     if (MGG_REGIONS_MAP[region] === window.location.hostname) {

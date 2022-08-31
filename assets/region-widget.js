@@ -1,27 +1,27 @@
-import { h, render } from 'https://unpkg.com/preact@latest?module';
-import { useState } from 'https://unpkg.com/preact@latest/hooks/dist/hooks.module.js?module'
-import htm from 'https://unpkg.com/htm?module';
+import { h, render } from "https://unpkg.com/preact@latest?module";
+import { useState } from "https://unpkg.com/preact@latest/hooks/dist/hooks.module.js?module";
+import htm from "https://unpkg.com/htm?module";
 
 const html = htm.bind(h);
 
-const MGG_REGIONS_MAP = { ca: 'mygogear.ca', us: 'mygogear.com' }
+const MGG_REGIONS_MAP = { ca: "mygogear.ca", us: "mygogear.com" };
 const MGG_FLAGS_MAP = {
-  ca: 'https://cdn.shopify.com/s/files/1/1636/9213/files/CA-Canada-Flag-icon.jpg?v=1661887235',
-  us: 'https://cdn.shopify.com/s/files/1/1636/9213/files/US-United-States-Flag-icon.jpg?v=1661887239',
-}
-const STORAGE_KEY = 'mgg_region'
+  ca: "https://cdn.shopify.com/s/files/1/1636/9213/files/CA-Canada-Flag-icon.jpg?v=1661887235",
+  us: "https://cdn.shopify.com/s/files/1/1636/9213/files/US-United-States-Flag-icon.jpg?v=1661887239",
+};
+const STORAGE_KEY = "mgg_region";
 
 function RegionWidget({ savedRegion }) {
-  const [region, setRegion] = useState(savedRegion)
-  
+  const [region, setRegion] = useState(savedRegion);
+
   if (region) {
   }
-  
+
   function handleClick(value) {
-    setRegion(value)
-    localStorage.setItem(STORAGE_KEY, value)
+    setRegion(value);
+    localStorage.setItem(STORAGE_KEY, value);
   }
-  
+
   return html`
     <div class="region-modal__container">
       <div class="region-modal__overlay" />
@@ -31,11 +31,17 @@ function RegionWidget({ savedRegion }) {
           <hr />
         </div>
         <div class="region-modal__body">
-          <button class="region-modal__option" onClick="${() => handleClick('ca')}">
+          <button
+            class="region-modal__option"
+            onClick="${() => handleClick("ca")}"
+          >
             <img src="${MGG_FLAGS_MAP.ca}" />
             Canada
           </button>
-          <button class="region-modal__option" onClick=${() => handleClick('us')}>
+          <button
+            class="region-modal__option"
+            onClick=${() => handleClick("us")}
+          >
             <img src="${MGG_FLAGS_MAP.us}" />
             USA
           </button>
@@ -46,9 +52,12 @@ function RegionWidget({ savedRegion }) {
         </div>
       </dialogue>
     </div>
-  `
+  `;
 }
 
-const savedRegion = localStorage.getItem('mgg-region')
+const savedRegion = localStorage.getItem("mgg-region");
 
-render(html`<${RegionWidget} region=${savedRegion} />`, document.querySelector('.site-header__region'))
+render(
+  html`<${RegionWidget} region=${savedRegion} />`,
+  document.querySelector(".site-header__region")
+);

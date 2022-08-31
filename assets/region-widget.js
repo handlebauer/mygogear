@@ -38,7 +38,7 @@ function RegionWidget({ savedRegion }) {
           </div>
 
           <div class="footer">
-            <i class="fa-regular fa-circle-exclamation"></i>
+            <i class="fa-solid fa-circle-exclamation"></i>
             Shipping cost is optimized by region
           </div>
         </dialogue>

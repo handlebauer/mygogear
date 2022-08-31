@@ -207,6 +207,17 @@
           "show_vendor": false,
           "show_view_all": false
         }
+      },
+      "about": {
+        "type": "about",
+        "settings": {
+        }
+      },
+      "contact-image": {
+        "type": "contact-image",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/support-img.webp"
+        }
       }
     },
     "content_for_index": [

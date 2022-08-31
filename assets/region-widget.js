@@ -19,7 +19,10 @@ function RegionWidget({ savedRegion }) {
       return html`
         <img src="${MGG_FLAGS_MAP[region]}" />
       `
-    }
+    } 
+
+    window.location.replace(MGG_REGIONS_MAP[region])
+    return
   }
 
   function handleClick(value) {

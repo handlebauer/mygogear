@@ -200,7 +200,7 @@
         "type": "collection",
         "settings": {
           "title": "Accessories",
-          "collection": "accessories",
+          "collection": "trays",
           "grid": "3",
           "rows": "2",
           "show_vendor": false,

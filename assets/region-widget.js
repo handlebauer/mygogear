@@ -6,7 +6,7 @@ const html = htm.bind(h);
 
 const MGG_REGIONS_MAP = { ca: "my-go-gear-ca.myshopify.com", us: "mygogear.com" };
 const MGG_FLAGS_MAP = {
-  ca: "https://cdn.shopify.com/s/files/1/1636/9213/files/ca-flag.jpg?v=1661907748",
+  ca: "https://cdn.shopify.com/s/files/1/1636/9213/files/ca-flag.jpg?v=1661907861",
   us: "https://cdn.shopify.com/s/files/1/1636/9213/files/us-flag.jpg?v=1661907748",
 };
 const STORAGE_KEY = "mgg_region";

@@ -26,7 +26,7 @@ function RegionWidget() {
     if (MGG_REGIONS_MAP[region] === window.location.hostname) {
       const footerFlagContainer = document.querySelector('.site-footer__region-flag')
       const flag = html`<img src="${MGG_FLAGS_MAP[region]}" />`
-      footerFlagContainer.appendChild(render(flag, footerFlagContainer))
+      render(flag, footerFlagContainer)
       return flag
     }
 

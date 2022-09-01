@@ -22,6 +22,7 @@
         {%- assign footer_linklist = section.settings.footer_linklist -%}
         {% if linklists[footer_linklist].links.size > 0 %}
           <ul class="site-footer__linklist{% unless section.settings.footer_newsletter_enable %} site-footer__linklist--center{% endunless %}">
+            <aside class="site-footer__region-flag"></aside>
             {% for link in linklists[footer_linklist].links %}
               {% if forloop.first == true %}
                 {% include 'icon-search' %}
@@ -170,7 +171,6 @@
               <a href="https://mygogear.com/pages/terms-conditions">Terms & conditions</a>
             </small>
             <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}</small>
-            <small class="site-footer__copyright-content site-footer__copyright-content--powered-by">{{ powered_by_link }}</small>
           {% endunless %}
           {% if section.settings.show_payment_icons %}
             <div class="site-footer__payment-icons{% unless social_icons or section.settings.footer_newsletter_enable == blank %} site-footer__payment-icons--right{% endunless %}">

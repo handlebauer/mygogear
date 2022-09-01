@@ -4,8 +4,6 @@ import htm from "https://unpkg.com/htm?module";
 
 const html = htm.bind(h);
 
-console.log(html`<img src="https://hello.com/hii.gif />`)
-
 const MGG_REGIONS_MAP = {
   ca: "my-go-gear-ca.myshopify.com",
   us: "mygogear.com",
@@ -28,6 +26,7 @@ function RegionWidget() {
     if (MGG_REGIONS_MAP[region] === window.location.hostname) {
       const footerFlagContainer = document.querySelector('.site-footer__region-flag')
       const flag = html`<img src="${MGG_FLAGS_MAP[region]}" />`
+      footerFlagContainer.appendChild(render(flag, footerFlagContainer))
       return flag
     }
 

@@ -3717,7 +3717,11 @@ h1.product-single__title {
 .site-header__icons-wrapper {
   display: flex;
   justify-content: flex-end;
-  gap: 25px;
+  gap: 15px;
+
+  @include media-query($small) {
+    gap: 0;
+  }
 }
 
 .site-header__cart,

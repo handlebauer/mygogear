@@ -15,30 +15,42 @@
 
 {% if compare_at_price > price %}
   {% if price_varies %}
-    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-    <s class="product-price__price">{{ compare_at_price | money }}</s>
+    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}
+    </span>
+    <s class="product-price__price">{{ compare_at_price | money }}
+    </s>
     <span class="product-price__price product-price__sale">
       {{ money_price }}
-      <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}</span>
+      <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}
+      </span>
     </span>
   {% else %}
-    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-    <s class="product-price__price">{{ compare_at_price | money }}</s>
+    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}
+    </span>
+    <s class="product-price__price">{{ compare_at_price | money }}
+    </s>
     <span class="product-price__price product-price__sale">
       {{ money_price }}
-      <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}</span>
+      <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}
+      </span>
     </span>
   {% endif %}
 {% else %}
 
   {% if price_varies %}
-    <span class="product-price__price">{{ money_price }}</span>
+    <span class="product-price__price">{{ money_price }}
+    </span>
   {% else %}
-    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-    <span class="product-price__price">{{ money_price }}</span>
+    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}
+    </span>
+    <span class="product-price__price">{{ money_price }}
+    </span>
   {% endif %}
 {% endif %}
 
 {% unless available %}
-  <span class="product-price__sold-out">{{ 'products.product.sold_out' | t }}</span>
+  <br>
+  <span class="product-price__sold-out">
+    Back in stock&nbsp;{{ 'products.product.sold_out_until' | t }}
+  </span>
 {% endunless %}

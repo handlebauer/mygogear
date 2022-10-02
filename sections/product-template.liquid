@@ -45,28 +45,33 @@
   {% endfor %}
 
   <div class='product-single__major-details hide-medium-up'>
-    <h1 itemprop="name" class="product-single__title">{{ product.title }}</h1>
+    <h1 itemprop="name" class="product-single__title">{{ product.title }}
+    </h1>
 
     <p class="product-single__price product-single__price-{{ section.id }}{% unless current_variant.available %} product-price--sold-out{% endunless %}">
       {% if current_variant.compare_at_price > current_variant.price %}
-          <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-          <s id="ComparePrice-{{ section.id }}">{{ current_variant.compare_at_price | money }}</s>
-          <span class="product-price__price product-price__price-{{ section.id }} product-price__sale product-price__sale--single">
-            <span id="ProductPrice-{{ section.id }}"
-              itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
-              {{ current_variant.price | money }}
-            </span>
-            <span class="product-price__sale-label product-price__sale-label-{{ section.id }}">{{ 'products.product.on_sale' | t }}</span>
-          </span>
-      {% else %}
-        <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-        <s id="ComparePrice-{{ section.id }}" class="hide">{{ current_variant.compare_at_price | money }}</s>
-        <span class="product-price__price product-price__price-{{ section.id }}">
-          <span id="ProductPrice-{{ section.id }}"
-            itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+        <span class="visually-hidden">{{ 'products.product.regular_price' | t }}
+        </span>
+        <s id="ComparePrice-{{ section.id }}">{{ current_variant.compare_at_price | money }}
+        </s>
+        <span class="product-price__price product-price__price-{{ section.id }} product-price__sale product-price__sale--single">
+          <span id="ProductPrice-{{ section.id }}" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
             {{ current_variant.price | money }}
           </span>
-          <span class="product-price__sale-label product-price__sale-label-{{ section.id }} hide">{{ 'products.product.on_sale' | t }}</span>
+          <span class="product-price__sale-label product-price__sale-label-{{ section.id }}">{{ 'products.product.on_sale' | t }}
+          </span>
+        </span>
+      {% else %}
+        <span class="visually-hidden">{{ 'products.product.regular_price' | t }}
+        </span>
+        <s id="ComparePrice-{{ section.id }}" class="hide">{{ current_variant.compare_at_price | money }}
+        </s>
+        <span class="product-price__price product-price__price-{{ section.id }}">
+          <span id="ProductPrice-{{ section.id }}" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+            {{ current_variant.price | money }}
+          </span>
+          <span class="product-price__sale-label product-price__sale-label-{{ section.id }} hide">{{ 'products.product.on_sale' | t }}
+          </span>
         </span>
       {% endif %}
     </p>
@@ -89,18 +94,16 @@
           {% if enable_thumbnail_slides == true %}
             <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__prev thumbnails-slider__prev--{{ section.id }}">
               {% include 'icon-chevron-left' %}
-              <span class="icon__fallback-text">{{ 'sections.slideshow.previous_slide' | t }}</span>
+              <span class="icon__fallback-text">{{ 'sections.slideshow.previous_slide' | t }}
+              </span>
             </button>
           {% endif %}
           <ul class="grid grid--uniform product-single__thumbnails product-single__thumbnails-{{ section.id }}">
             {% for image in product.images %}
               {% unless forloop.last %}
                 <li class="grid__item {{ product_thumbnail_width }} product-single__thumbnails-item">
-                  <a
-                    href="{{ image.src | img_url: product_image_size, scale: product_image_scale }}"
-                      class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}"
-                      {% if enable_zoom %}data-zoom="{{ image.src | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
-                      <img class="product-single__thumbnail-image" src="{{ image.src | img_url: product_thumb_size, scale: product_image_scale }}" alt="{{ image.alt | escape }}">
+                  <a href="{{ image.src | img_url: product_image_size, scale: product_image_scale }}" class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}" {% if enable_zoom %}data-zoom="{{ image.src | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
+                    <img class="product-single__thumbnail-image" src="{{ image.src | img_url: product_thumb_size, scale: product_image_scale }}" alt="{{ image.alt | escape }}">
                   </a>
                 </li>
               {% endunless %}
@@ -109,7 +112,8 @@
           {% if enable_thumbnail_slides == true %}
             <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__next thumbnails-slider__next--{{ section.id }}">
               {% include 'icon-chevron-right' %}
-              <span class="icon__fallback-text">{{ 'sections.slideshow.next_slide' | t }}</span>
+              <span class="icon__fallback-text">{{ 'sections.slideshow.next_slide' | t }}
+              </span>
             </button>
           {% endif %}
         </div>
@@ -119,10 +123,12 @@
     <div class="grid__item {{ product_description_width }}">
       <div class="product-single__meta">
 
-        <h1 itemprop="name" class="product-single__title hide-small">{{ product.title }}</h1>
+        <h1 itemprop="name" class="product-single__title hide-small">{{ product.title }}
+        </h1>
 
         {% if section.settings.show_vendor %}
-          <p itemprop="brand" class="product-single__vendor">{{ product.vendor }}</p>
+          <p itemprop="brand" class="product-single__vendor">{{ product.vendor }}
+          </p>
         {% endif %}
 
         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -132,24 +138,28 @@
 
           <p class="product-single__price product-single__price-{{ section.id }}{% unless current_variant.available %} product-price--sold-out{% endunless %} hide-small">
             {% if current_variant.compare_at_price > current_variant.price %}
-                <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-                <s id="ComparePrice-{{ section.id }}">{{ current_variant.compare_at_price | money }}</s>
-                <span class="product-price__price product-price__price-{{ section.id }} product-price__sale product-price__sale--single">
-                  <span id="ProductPrice-{{ section.id }}"
-                    itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
-                    {{ current_variant.price | money }}
-                  </span>
-                  <span class="product-price__sale-label product-price__sale-label-{{ section.id }}">{{ 'products.product.on_sale' | t }}</span>
-                </span>
-            {% else %}
-              <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-              <s id="ComparePrice-{{ section.id }}" class="hide">{{ current_variant.compare_at_price | money }}</s>
-              <span class="product-price__price product-price__price-{{ section.id }}">
-                <span id="ProductPrice-{{ section.id }}"
-                  itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+              <span class="visually-hidden">{{ 'products.product.regular_price' | t }}
+              </span>
+              <s id="ComparePrice-{{ section.id }}">{{ current_variant.compare_at_price | money }}
+              </s>
+              <span class="product-price__price product-price__price-{{ section.id }} product-price__sale product-price__sale--single">
+                <span id="ProductPrice-{{ section.id }}" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
                   {{ current_variant.price | money }}
                 </span>
-                <span class="product-price__sale-label product-price__sale-label-{{ section.id }} hide">{{ 'products.product.on_sale' | t }}</span>
+                <span class="product-price__sale-label product-price__sale-label-{{ section.id }}">{{ 'products.product.on_sale' | t }}
+                </span>
+              </span>
+            {% else %}
+              <span class="visually-hidden">{{ 'products.product.regular_price' | t }}
+              </span>
+              <s id="ComparePrice-{{ section.id }}" class="hide">{{ current_variant.compare_at_price | money }}
+              </s>
+              <span class="product-price__price product-price__price-{{ section.id }}">
+                <span id="ProductPrice-{{ section.id }}" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+                  {{ current_variant.price | money }}
+                </span>
+                <span class="product-price__sale-label product-price__sale-label-{{ section.id }} hide">{{ 'products.product.on_sale' | t }}
+                </span>
               </span>
             {% endif %}
           </p>
@@ -158,12 +168,13 @@
             {% unless product.options.size == 1 and product.variants[0].title == 'Default Title' %}
               {% for option in product.options_with_values %}
                 <div class="selector-wrapper js product-form__item">
-                  <label {% if option.name == 'default' %}class="label--hidden" {% endif %}for="SingleOptionSelector-{{ forloop.index0 }}">
+                  <label {% if option.name == 'default' %}class="label--hidden"{% endif %}for="SingleOptionSelector-{{ forloop.index0 }}">
                     {{ option.name }}
                   </label>
                   <select class="single-option-selector single-option-selector-{{ section.id }} product-form__input" id="SingleOptionSelector-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
                     {% for value in option.values %}
-                      <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</option>
+                      <option value="{{ value | escape }}" {% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}
+                      </option>
                     {% endfor %}
                   </select>
                 </div>
@@ -173,18 +184,22 @@
             <select name="id" id="ProductSelect-{{ section.id }}" data-section="{{ section.id }}" class="product-form__variants no-js">
               {% for variant in product.variants %}
                 {% if variant.available %}
-                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                  <option {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %} value="{{ variant.id }}">
                     {{ variant.title }}
                   </option>
                 {% else %}
-                  <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+                  <option disabled="disabled">{{ variant.title }}
+                    -
+                    {{ 'products.product.sold_out' | t }}
+                  </option>
                 {% endif %}
               {% endfor %}
             </select>
 
             {% if section.settings.show_quantity_selector %}
               <div class="product-form__item product-form__item--quantity">
-                <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
+                <label for="Quantity">{{ 'products.product.quantity' | t }}
+                </label>
                 <input type="number" id="Quantity" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*">
               </div>
             {% endif %}
@@ -193,7 +208,8 @@
               <button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if product.options.size == 1 and product.variants[0].title == 'Default Title' %} product-form__cart-submit--small{% endif %}">
                 <span id="AddToCartText-{{ section.id }}">
                   {% unless current_variant.available %}
-                    {{ 'products.product.sold_out' | t }}
+                    Back in stock&nbsp;
+                    {{ 'products.product.sold_out_until' | t }}
                   {% else %}
                     {{ 'products.product.add_to_cart' | t }}
                   {% endunless %}
@@ -215,21 +231,21 @@
     </div>
     {% if section.settings.show_often_bought_together %}
       <div class="product-single__often-bought-together">
-          {% assign bought_with_tag = 'bought-with-' | append: product.handle %}
-          {% assign found_bought_with_product = false %}
-          {% for product in collections.all.products %}
-            {% if product.tags contains bought_with_tag %}
-              {% if found_bought_with_product == false %}
-                {% assign found_bought_with_product = true %}
-                <h3>People who bought this, also bought:</h3>
-                <div class="grid grid--uniform grid--view-items">
+        {% assign bought_with_tag = 'bought-with-' | append: product.handle %}
+        {% assign found_bought_with_product = false %}
+        {% for product in collections.all.products %}
+          {% if product.tags contains bought_with_tag %}
+            {% if found_bought_with_product == false %}
+              {% assign found_bought_with_product = true %}
+              <h3>People who bought this, also bought:</h3>
+              <div class="grid grid--uniform grid--view-items">
               {% endif %}
               <div class="grid__item grid__item--{{section.id}} small--one-half medium-up--one-quarter">
                 {% include 'product-card-grid', grid_image_width: '250x250' %}
               </div>
             {% endif %}
           {% endfor %}
-        {% if found_bought_with_product == ture %}
+          {% if found_bought_with_product == ture %}
           </div>
         {% endif %}
       </div>
@@ -264,16 +280,13 @@
           {
             "value": "small",
             "label": "Small"
-          },
-          {
+          }, {
             "value": "medium",
             "label": "Medium"
-          },
-          {
+          }, {
             "value": "large",
             "label": "Large"
-          },
-          {
+          }, {
             "value": "full",
             "label": "Full-width"
           }
@@ -297,20 +310,17 @@
         "id": "show_vendor",
         "label": "Show vendor",
         "default": false
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "enable_zoom",
         "label": "Enable image zoom",
         "default": true
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "show_share_buttons",
         "label": "Show social sharing buttons",
         "default": true
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "show_often_bought_together",
         "label": "Show products that are often bought in tandem with this product",

@@ -63,14 +63,7 @@
                 <label for="Email" class="h4">{{ 'general.newsletter_form.newsletter_email' | t }}</label>
                 <div class="input-group">
                   <input type="hidden" name="contact[tags]" value="newsletter">
-                  <input type="email"
-                    name="contact[email]"
-                    id="Email"
-                    class="input-group__field newsletter__input"
-                    value="{% if customer %}{{ customer.email }}{% endif %}"
-                    placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
-                    autocorrect="off"
-                    autocapitalize="off">
+                  <input type="email" name="contact[email]" id="Email" class="input-group__field newsletter__input" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}" autocorrect="off" autocapitalize="off">
                   <span class="input-group__btn">
                     <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe">
                       <span class="newsletter__submit-text--large">{{ 'general.newsletter_form.submit' | t }}</span>
@@ -210,20 +203,17 @@
         "id": "footer_linklist",
         "label": "Primary menu",
         "default": "footer"
-      },
-      {
+      }, {
         "type": "link_list",
         "id": "footer_linklist_two",
         "label": "Additional menu",
         "default": "main-menu"
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "footer_newsletter_enable",
         "label": "Show newsletter signup",
         "default": false
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "show_payment_icons",
         "label": "Show payment icons",

@@ -1,4 +1,4 @@
-<div class="hero hero--{{ section.settings.hero_size }}{% if section.settings.title != blank or section.settings.text != blank or section.settings.button_label != blank %} hero__overlay{% endif %}"{% if section.settings.image %} style="background-image: url('{{ section.settings.image | img_url: '2048x' }}'); background-position: center {{ section.settings.alignment }};"{% endif %}>
+<div class="hero hero--{{ section.settings.hero_size }}{% if section.settings.title != blank or section.settings.text != blank or section.settings.button_label != blank %} hero__overlay{% endif %}" {% if section.settings.image %} style="background-image: url('{{ section.settings.image | img_url: '2048x' }}'); background-position: center {{ section.settings.alignment }};"{% endif %}>
   {% if section.settings.image == blank %}
     <div class="placeholder-background">
       {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -47,12 +47,10 @@
           {
             "value": "top",
             "label": "Top"
-          },
-          {
+          }, {
             "value": "center",
             "label": "Middle"
-          },
-          {
+          }, {
             "value": "bottom",
             "label": "Bottom"
           }
@@ -69,8 +67,7 @@
         "id": "text",
         "label": "Text",
         "default": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>"
-      },
-      {
+      }, {
         "type": "select",
         "id": "hero_size",
         "label": "Section height",
@@ -91,14 +88,12 @@
           {
             "label": "Large",
             "value": "large"
-          },
-          {
+          }, {
             "label": "Extra Large",
             "value": "x-large"
           }
         ]
-      },
-      {
+      }, {
         "type": "select",
         "id": "text_size",
         "label": "Text size",
@@ -107,19 +102,16 @@
           {
             "label": "Medium",
             "value": "medium"
-          },
-          {
+          }, {
             "label": "Large",
             "value": "large"
           }
         ]
-      },
-      {
+      }, {
         "type": "text",
         "id": "button_label",
         "label": "Button label"
-      },
-      {
+      }, {
         "type": "url",
         "id": "button_link",
         "label": "Button link"

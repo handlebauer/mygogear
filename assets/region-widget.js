@@ -2,6 +2,8 @@ import { h, render } from "https://unpkg.com/preact@latest?module";
 import { useState } from "https://unpkg.com/preact@latest/hooks/dist/hooks.module.js?module";
 import htm from "https://unpkg.com/htm?module";
 
+console.log('Got to script')
+
 const html = htm.bind(h);
 
 const MGG_REGIONS_MAP = {
@@ -22,6 +24,9 @@ function RegionWidget() {
 
   const [region, setRegion] = useState(localStorage.getItem(STORAGE_KEY));
 
+  console.log('Got to widget')
+  console.log({ region })
+  
   if (region) {
     if (MGG_REGIONS_MAP[region] === window.location.hostname) {
       const footerFlagContainer = document.querySelector('.site-footer__region-flag')
@@ -72,6 +77,8 @@ function RegionWidget() {
     </div>
   `;
 }
+
+console.log('Rendering')
 
 render(
   html`<${RegionWidget} />`,

@@ -2,8 +2,6 @@ import { h, render } from "https://unpkg.com/preact@latest?module";
 import { useState } from "https://unpkg.com/preact@latest/hooks/dist/hooks.module.js?module";
 import htm from "https://unpkg.com/htm?module";
 
-// Test commit
-
 const html = htm.bind(h);
 
 const MGG_REGIONS_MAP = {

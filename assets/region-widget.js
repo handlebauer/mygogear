@@ -37,7 +37,6 @@ function RegionWidget() {
 
   function handleClick(value) {
     setRegion(value);
-    console.log(region)
     localStorage.setItem(STORAGE_KEY, value);
   }
 

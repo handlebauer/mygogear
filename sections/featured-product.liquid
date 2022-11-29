@@ -69,11 +69,8 @@
           <ul class="grid grid--uniform product-single__thumbnails product-single__thumbnails-{{ section.id }}">
             {% for image in product.images %}
               <li class="grid__item {{ product_thumbnail_width }} product-single__thumbnails-item">
-                <a
-                  href="{{ image.src | img_url: product_image_size, scale: product_image_scale }}"
-                    class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}"
-                    {% if enable_zoom %}data-zoom="{{ image.src | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
-                    <img class="product-single__thumbnail-image" src="{{ image.src | img_url: product_thumb_size, scale: product_image_scale }}" alt="{{ image.alt | escape }}">
+                <a href="{{ image.src | img_url: product_image_size, scale: product_image_scale }}" class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}" {% if enable_zoom %}data-zoom="{{ image.src | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
+                  <img class="product-single__thumbnail-image" src="{{ image.src | img_url: product_thumb_size, scale: product_image_scale }}" alt="{{ image.alt | escape }}">
                 </a>
               </li>
             {% endfor %}
@@ -121,21 +118,19 @@
 
           <p class="product-single__price product-single__price-{{ section.id }}{% unless current_variant.available %} product-price--sold-out{% endunless %}">
             {% if compare_at_price > price %}
-                <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-                <s id="ComparePrice-{{ section.id }}">{{ compare_at_price | money }}</s>
-                <span class="product-price__price product-price__price-{{ section.id }} product-price__sale product-price__sale--single">
-                  <span id="ProductPrice-{{ section.id }}"
-                    itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
-                    {{ price | money }}
-                  </span>
-                  <span class="product-price__sale-label product-price__sale-label-{{ section.id }}">{{ 'products.product.on_sale' | t }}</span>
+              <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+              <s id="ComparePrice-{{ section.id }}">{{ compare_at_price | money }}</s>
+              <span class="product-price__price product-price__price-{{ section.id }} product-price__sale product-price__sale--single">
+                <span id="ProductPrice-{{ section.id }}" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+                  {{ price | money }}
                 </span>
+                <span class="product-price__sale-label product-price__sale-label-{{ section.id }}">{{ 'products.product.on_sale' | t }}</span>
+              </span>
             {% else %}
               <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
               <s id="ComparePrice-{{ section.id }}" class="hide">{{ compare_at_price | money }}</s>
               <span class="product-price__price product-price__price-{{ section.id }}">
-                <span id="ProductPrice-{{ section.id }}"
-                  itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+                <span id="ProductPrice-{{ section.id }}" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
                   {{ price | money }}
                 </span>
                 <span class="product-price__sale-label product-price__sale-label-{{ section.id }} hide">{{ 'products.product.on_sale' | t }}</span>
@@ -148,12 +143,12 @@
               {% unless product.options.size == 1 and product.variants[0].title == 'Default Title' %}
                 {% for option in product.options_with_values %}
                   <div class="selector-wrapper js product-form__item">
-                    <label {% if option.name == 'default' %}class="label--hidden" {% endif %}for="SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}">
+                    <label {% if option.name == 'default' %}class="label--hidden"{% endif %}for="SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}">
                       {{ option.name }}
                     </label>
                     <select class="single-option-selector single-option-selector-{{ section.id }} product-form__input" id="SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
                       {% for value in option.values %}
-                        <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</option>
+                        <option value="{{ value | escape }}" {% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</option>
                       {% endfor %}
                     </select>
                   </div>
@@ -163,7 +158,7 @@
               <select name="id" id="ProductSelect-{{ section.id }}" data-section="{{ section.id }}" class="product-form__variants no-js">
                 {% for variant in product.variants %}
                   {% if variant.available %}
-                    <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                    <option {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %} value="{{ variant.id }}">
                       {{ variant.title }}
                     </option>
                   {% else %}
@@ -234,16 +229,13 @@
           {
             "value": "small",
             "label": "Small"
-          },
-          {
+          }, {
             "value": "medium",
             "label": "Medium"
-          },
-          {
+          }, {
             "value": "large",
             "label": "Large"
-          },
-          {
+          }, {
             "value": "full",
             "label": "Full-width"
           }
@@ -261,20 +253,17 @@
         "id": "show_variant_labels",
         "label": "Show variant labels",
         "default": true
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "show_vendor",
         "label": "Show vendor",
         "default": false
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "enable_zoom",
         "label": "Enable image zoom",
         "default": true
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "show_share_buttons",
         "label": "Show social sharing buttons",

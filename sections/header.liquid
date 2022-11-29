@@ -88,22 +88,20 @@
         {% endcomment %}
         {% if template.name == 'index' %}
           <h1 class="h2 site-header__logo" itemscope itemtype="http://schema.org/Organization">
-        {% else %}
-          <div class="h2 site-header__logo" itemscope itemtype="http://schema.org/Organization">
-        {% endif %}
-          {% if section.settings.logo %}
-            <a href="/" itemprop="url" class="site-header__logo-image{% if section.settings.align_logo == 'center' %} site-header__logo-image--centered{% endif %}">
-              {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
-              <img src="{{ section.settings.logo | img_url: image_size }}"
-                   srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-                   alt="{{ section.settings.logo.alt | default: shop.name }}"
-                   itemprop="logo">
-            </a>
           {% else %}
-            <a class="site-header__logo-link" href="/" itemprop="url">{{ shop.name }}</a>
-          {% endif %}
-        {% if template.name == 'index' %}
-          </h1>
+            <div class="h2 site-header__logo" itemscope itemtype="http://schema.org/Organization">
+            {% endif %}
+            {% if section.settings.logo %}
+              <a href="/" itemprop="url" class="site-header__logo-image{% if section.settings.align_logo == 'center' %} site-header__logo-image--centered{% endif %}">
+                {% capture image_size %}
+                  {{ section.settings.logo_max_width }}x{% endcapture %}
+                <img src="{{ section.settings.logo | img_url: image_size }}" srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
+              </a>
+            {% else %}
+              <a class="site-header__logo-link" href="/" itemprop="url">{{ shop.name }}</a>
+            {% endif %}
+            {% if template.name == 'index' %}
+            </h1>
         {% else %}
           </div>
         {% endif %}
@@ -131,10 +129,9 @@
             {% endif %}
           {% endif %}
 
-          <div class="site-header__region">
-            <!-- <img src="https://cdn.shopify.com/s/files/1/1636/9213/files/US-United-States-Flag-icon.jpg?v=1661887239" class="site-header__region-flag"> -->
+          <div class="site-header__region"><!-- <img src="https://cdn.shopify.com/s/files/1/1636/9213/files/US-United-States-Flag-icon.jpg?v=1661887239" class="site-header__region-flag"> -->
           </div>
-          
+
           <a href="/cart" class="site-header__cart">
             <aside class="site-header__cart-text">My Cart</aside>
             {% include 'icon-cart' %}
@@ -162,9 +159,9 @@
   </header>
 
   {% if section.settings.align_logo == 'center' %}
-  <nav class="small--hide border-bottom" id="AccessibleNav" role="navigation">
-    {% include 'site-nav', nav_alignment: 'site-nav--centered' %}
-  </nav>
+    <nav class="small--hide border-bottom" id="AccessibleNav" role="navigation">
+      {% include 'site-nav', nav_alignment: 'site-nav--centered' %}
+    </nav>
   {% endif %}
   <style>
     {% if section.settings.logo != blank %}
@@ -191,8 +188,13 @@
         "label": "Logo alignment",
         "default": "left",
         "options": [
-          {"value": "left", "label": "Left"},
-          {"value": "center", "label": "Centered"}
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Centered"
+          }
         ]
       },
       {
@@ -211,32 +213,27 @@
         "id": "main_linklist",
         "label": "Menu",
         "default": "main-menu"
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "message",
         "label": "Show announcement",
         "default": false
-      },
-      {
+      }, {
         "type": "text",
         "id": "message_text",
         "label": "Announcement text",
         "default": "Announce something here"
-      },
-      {
+      }, {
         "type": "url",
         "id": "message_link",
         "label": "Announcement link",
         "info": "Optional"
-      },
-      {
+      }, {
         "type": "color",
         "id": "color_bg",
         "label": "Announcement color",
         "default": "#7796A8"
-      },
-      {
+      }, {
         "type": "color",
         "id": "color_text",
         "label": "Announcement text color",

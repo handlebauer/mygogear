@@ -16,10 +16,10 @@
               {% assign reveresed_collections = collections | reverse %}
               {% for collection in reveresed_collections %}
                 {% unless forloop.first == true %}
-                <li class="site-nav__childlist-item">
-                  <a href="{{ collection.url }}" class="site-nav__link site-nav__child-link site-nav__child-link--parent">
-                    <span class="site-nav__label">{{ collection.title }}</span>
-                  </a>
+                  <li class="site-nav__childlist-item">
+                    <a href="{{ collection.url }}" class="site-nav__link site-nav__child-link site-nav__child-link--parent">
+                      <span class="site-nav__label">{{ collection.title }}</span>
+                    </a>
                     <ul>
                       {% for product in collection.products %}
                         <li>
@@ -29,7 +29,7 @@
                         </li>
                       {% endfor %}
                     </ul>
-                </li>
+                  </li>
                 {% endunless %}
               {% endfor %}
             </ul>

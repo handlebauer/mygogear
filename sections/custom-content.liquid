@@ -10,7 +10,7 @@
       {% case block.settings.width %}
         {% when '25%' %}
           <style>
-            .custom__item--{{block.id}} .custom__image {
+            .custom__item--{{ block.id}}.custom__image {
               max-height: 250px;
             }
           </style>
@@ -18,7 +18,7 @@
           {%- assign image_size = '250x250' -%}
         {% when '33%' %}
           <style>
-            .custom__item--{{block.id}} .custom__image {
+            .custom__item--{{ block.id}}.custom__image {
               max-height: 345px;
             }
           </style>
@@ -26,7 +26,7 @@
           {%- assign image_size = '345x345' -%}
         {% when '50%' %}
           <style>
-            .custom__item--{{block.id}} .custom__image {
+            .custom__item--{{ block.id}}.custom__image {
               max-height: 530px;
             }
           </style>
@@ -34,7 +34,7 @@
           {%- assign image_size = '530x530' -%}
         {% when '66%' %}
           <style>
-            .custom__item--{{block.id}} .custom__image {
+            .custom__item--{{ block.id}}.custom__image {
               max-height: 720px;
             }
           </style>
@@ -42,7 +42,7 @@
           {%- assign image_size = '720x720' -%}
         {% when '75%' %}
           <style>
-            .custom__item--{{block.id}} .custom__image {
+            .custom__item--{{ block.id}}.custom__image {
               max-height: 810px;
             }
           </style>
@@ -50,7 +50,7 @@
           {%- assign image_size = '810x810' -%}
         {% when '100%' %}
           <style>
-            .custom__item--{{block.id}} .custom__image {
+            .custom__item--{{ block.id}}.custom__image {
               max-height: 1090px;
             }
           </style>
@@ -100,7 +100,8 @@
                 <div class="grid-view-item">
                   <a class="grid-view-item__link" href="#">
                     <div class="grid-view-item__image">
-                      {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                      {% capture current %}
+                        {% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
                       {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
                     </div>
                     <div class="h4 grid-view-item__title">{{ 'homepage.onboarding.product_title' | t }}</div>
@@ -179,12 +180,10 @@
               {
                 "value": "66%",
                 "label": "66%"
-              },
-              {
+              }, {
                 "value": "75%",
                 "label": "75%"
-              },
-              {
+              }, {
                 "value": "100%",
                 "label": "100%"
               }
@@ -196,20 +195,33 @@
             "label": "Vertical alignment",
             "default": "center",
             "options": [
-              {"value": "top-middle", "label": "Top"},
-              {"value": "center", "label": "Middle"},
-              {"value": "bottom-middle", "label": "Bottom"}
+              {
+                "value": "top-middle",
+                "label": "Top"
+              }, {
+                "value": "center",
+                "label": "Middle"
+              }, {
+                "value": "bottom-middle",
+                "label": "Bottom"
+              }
             ]
-          },
-          {
+          }, {
             "type": "select",
             "id": "align_text",
             "label": "Horizontal alignment",
             "default": "left",
             "options": [
-              {"value": "left", "label": "Left"},
-              {"value": "center", "label": "Centered"},
-              {"value": "right", "label": "Right"}
+              {
+                "value": "left",
+                "label": "Left"
+              }, {
+                "value": "center",
+                "label": "Centered"
+              }, {
+                "value": "right",
+                "label": "Right"
+              }
             ]
           }
         ]
@@ -222,8 +234,7 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image"
-          },
-          {
+          }, {
             "type": "select",
             "id": "width",
             "label": "Container width",
@@ -244,18 +255,15 @@
               {
                 "value": "66%",
                 "label": "66%"
-              },
-              {
+              }, {
                 "value": "75%",
                 "label": "75%"
-              },
-              {
+              }, {
                 "value": "100%",
                 "label": "100%"
               }
             ]
-          },
-          {
+          }, {
             "type": "select",
             "id": "alignment",
             "label": "Vertical alignment",
@@ -276,24 +284,19 @@
               {
                 "value": "middle-left",
                 "label": "Middle left"
-              },
-              {
+              }, {
                 "value": "center",
                 "label": "Middle"
-              },
-              {
+              }, {
                 "value": "middle-right",
                 "label": "Middle right"
-              },
-              {
+              }, {
                 "value": "bottom-left",
                 "label": "Bottom left"
-              },
-              {
+              }, {
                 "value": "bottom-middle",
                 "label": "Bottom middle"
-              },
-              {
+              }, {
                 "value": "bottom-right",
                 "label": "Bottom right"
               }
@@ -310,8 +313,7 @@
             "id": "video_url",
             "label": "YouTube or Vimeo link",
             "accept": ["youtube", "vimeo"]
-          },
-          {
+          }, {
             "type": "select",
             "id": "width",
             "label": "Container width",
@@ -332,18 +334,15 @@
               {
                 "value": "66%",
                 "label": "66%"
-              },
-              {
+              }, {
                 "value": "75%",
                 "label": "75%"
-              },
-              {
+              }, {
                 "value": "100%",
                 "label": "100%"
               }
             ]
-          },
-          {
+          }, {
             "type": "select",
             "id": "alignment",
             "label": "Vertical alignment",
@@ -352,12 +351,10 @@
               {
                 "value": "top-middle",
                 "label": "Top"
-              },
-              {
+              }, {
                 "value": "center",
                 "label": "Middle"
-              },
-              {
+              }, {
                 "value": "bottom-middle",
                 "label": "Bottom"
               }
@@ -373,8 +370,7 @@
             "type": "product",
             "id": "product",
             "label": "Product"
-          },
-          {
+          }, {
             "type": "select",
             "id": "width",
             "label": "Container width",
@@ -395,18 +391,15 @@
               {
                 "value": "66%",
                 "label": "66%"
-              },
-              {
+              }, {
                 "value": "75%",
                 "label": "75%"
-              },
-              {
+              }, {
                 "value": "100%",
                 "label": "100%"
               }
             ]
-          },
-          {
+          }, {
             "type": "select",
             "id": "alignment",
             "label": "Vertical alignment",
@@ -427,32 +420,26 @@
               {
                 "value": "middle-left",
                 "label": "Middle left"
-              },
-              {
+              }, {
                 "value": "center",
                 "label": "Middle"
-              },
-              {
+              }, {
                 "value": "middle-right",
                 "label": "Middle right"
-              },
-              {
+              }, {
                 "value": "bottom-left",
                 "label": "Bottom left"
-              },
-              {
+              }, {
                 "value": "bottom-middle",
                 "label": "Bottom middle"
-              },
-              {
+              }, {
                 "value": "bottom-right",
                 "label": "Bottom right"
               }
             ]
           }
         ]
-      },
-      {
+      }, {
         "type": "collection",
         "name": "Collection",
         "settings": [
@@ -460,8 +447,7 @@
             "type": "collection",
             "id": "collection",
             "label": "Collection"
-          },
-          {
+          }, {
             "type": "select",
             "id": "width",
             "label": "Container width",
@@ -482,20 +468,17 @@
               {
                 "value": "66%",
                 "label": "66%"
-              },
-              {
+              }, {
                 "value": "75%",
                 "label": "75%"
-              },
-              {
+              }, {
                 "value": "100%",
                 "label": "100%"
               }
             ]
           }
         ]
-      },
-      {
+      }, {
         "type": "html",
         "name": "Custom HTML",
         "settings": [
@@ -503,8 +486,7 @@
             "type": "html",
             "id": "code",
             "label": "HTML"
-          },
-          {
+          }, {
             "type": "select",
             "id": "width",
             "label": "Container width",
@@ -525,12 +507,10 @@
               {
                 "value": "66%",
                 "label": "66%"
-              },
-              {
+              }, {
                 "value": "75%",
                 "label": "75%"
-              },
-              {
+              }, {
                 "value": "100%",
                 "label": "100%"
               }
@@ -546,8 +526,7 @@
         "blocks": [
           {
             "type": "text"
-          },
-          {
+          }, {
             "type": "image"
           }
         ]

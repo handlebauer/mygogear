@@ -23,7 +23,9 @@
 
           <div class="text-center">
             {% if form.password_needed %}
-              <p><a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a></p>
+              <p>
+                <a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a>
+              </p>
             {% endif %}
 
             <input type="submit" class="btn" value="{{ 'customer.login.sign_in' | t }}">
@@ -56,7 +58,7 @@
             {% endif %}
 
             <label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
-            <input type="email" value="" name="email" id="RecoverEmail" class="input-full"autocorrect="off" autocapitalize="off">
+            <input type="email" value="" name="email" id="RecoverEmail" class="input-full" autocorrect="off" autocapitalize="off">
 
             <div class="text-center">
               <p>

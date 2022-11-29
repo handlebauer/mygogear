@@ -22,7 +22,9 @@
           {% if section.settings.address != blank %}
             <div class="rte-setting">{{ section.settings.address }}</div>
             {% if section.settings.show_button %}
-              <p><a href="https://maps.google.com?daddr={{ section.settings.map_address }}" class="btn btn--secondary btn--small" target="_blank">{{ 'sections.map.get_directions' | t }}</a></p>
+              <p>
+                <a href="https://maps.google.com?daddr={{ section.settings.map_address }}" class="btn btn--secondary btn--small" target="_blank">{{ 'sections.map.get_directions' | t }}</a>
+              </p>
             {% endif %}
           {% endif %}
         </div>
@@ -62,8 +64,7 @@
         "type": "text",
         "label": "Google Maps API key",
         "info": "If your store experiences more than 2,500 visitors a day, you’ll need to generate both [JavaScript](https://developers.google.com/maps/documentation/javascript/get-api-key) and [Geocoding](https://developers.google.com/maps/documentation/geocoding/get-api-key) API keys"
-      },
-      {
+      }, {
         "id": "show_button",
         "type": "checkbox",
         "label": "Show 'Get directions' button",

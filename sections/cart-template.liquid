@@ -26,7 +26,8 @@
                   <a href="{{ item.url }}">
                     {{ item.product.title }}
                     {% if item.quantity > 1 %}
-                      <span class="medium-up--hide"><span class="visually-hidden">{{ 'cart.label.quantity' | t }}</span>(x{{ item.quantity }})</span>
+                      <span class="medium-up--hide">
+                        <span class="visually-hidden">{{ 'cart.label.quantity' | t }}</span>(x{{ item.quantity }})</span>
                     {% endif %}
                   </a>
                 </div>
@@ -45,7 +46,7 @@
                   but p.last is the actual custom property and may be blank. If it is, don't show it.
 
                   For more info on line item properties, visit:
-                    - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
+                  - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
                 {% endcomment %}
                 {%- assign property_size = item.properties | size -%}
                 {% if property_size > 0 %}
@@ -95,7 +96,9 @@
               </td>
               <td class="text-right small--hide">
                 {% if item.original_line_price != item.line_price %}
-                  <div class="cart-item__original-price"><s>{{ item.original_line_price | money }}</s></div>
+                  <div class="cart-item__original-price">
+                    <s>{{ item.original_line_price | money }}</s>
+                  </div>
                 {% endif %}
 
                 <div>
@@ -131,7 +134,7 @@
               </div>
             {% endif %}
             <div class="cart__shipping">{{ 'cart.general.shipping_at_checkout' | t }}</div>
-            <a href="collections/all" class="btn btn--secondary cart__update cart__continue--large small--hide" >{{ 'cart.general.continue_shopping' | t }}</a>
+            <a href="collections/all" class="btn btn--secondary cart__update cart__continue--large small--hide">{{ 'cart.general.continue_shopping' | t }}</a>
             <input type="submit" name="update" class="btn btn--secondary cart__update cart__update--large small--hide" value="{{ 'cart.general.update' | t }}">
             <input type="submit" name="checkout" class="btn btn--small-wide" value="{{ 'cart.general.checkout' | t }}">
             {% if additional_checkout_buttons %}

@@ -161,7 +161,7 @@
         <div class="site-footer__copyright{% if social_icons and section.settings.footer_newsletter_enable != blank %} site-footer__copyright--right medium-up--text-right{% elsif social_icons == false and section.settings.footer_newsletter_enable %} medium-up--text-left{% endif %}">
           {% unless social_icons and section.settings.footer_newsletter_enable and section.settings.show_payment_icons %}
             <small class="site-footer__copyright-content site-footer__copyright-content--terms-and-conditions">
-              <a href="https://mygogear.com/pages/terms-conditions">Terms & conditions</a>
+              <a href="https://mygogear.ca/pages/terms-conditions">Terms & conditions</a>
             </small>
             <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}</small>
           {% endunless %}

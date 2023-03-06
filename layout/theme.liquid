@@ -85,12 +85,16 @@
     <!--<![endif]-->
     <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
+    <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'region-widget.js' | asset_url }}" defer="defer" type="module"> </script>
+    <!--<![endif]-->
     <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
-  {{ content_for_header }}
+    {{ content_for_header }}
   </head>
 
-    <body class="template-{{ template | split: '.' | first }} {%- if product.id -%}product-{{ product.id }}{%- endif -%}"> <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+  <body class="template-{{ template | split: '.' | first }} {%- if product.id -%}product-{{ product.id }}{%- endif -%}">
+
+    <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
     <div id="SearchDrawer" class="search-bar drawer drawer--top">
       <div class="search-bar__table">
